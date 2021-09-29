@@ -1,0 +1,14 @@
+.registration-form{
+    padding:30px;
+    border-radius: 0px 20px 0px 20px;
+    box-shadow: 5px 5px 10px black;
+    background-color: aqua;
+    width: 400px;
+    border: 2px solid red;
+}
+.registration-container{
+    background-image: url('../images/bg-01.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
