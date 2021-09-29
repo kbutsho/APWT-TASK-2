@@ -27,15 +27,17 @@ class RegisterController extends Controller
                     'regex:/[A-Z]/',      // must contain at least one uppercase letter
                     'regex:/[0-9]/',      // must contain at least one digit
                     'regex:/[@$!%*#?&]/' // must contain a special character
-                   
+
                 ],
                 'password_confirmation' => [
+                    'required',
                     'same:password',
                     'min:10'
                 ]
             ],
             [
-               'password_confirmation.same' => 'Password and Confirm Password must match!',
+                'password_confirmation.required' => 'Confirm Password is Required',
+                'password_confirmation.same' => 'Password and Confirm Password must match!',
                 'password.required' => 'Password is required',
                 'name.required' => 'Name is required',
                 'email.required' => 'Email is required',

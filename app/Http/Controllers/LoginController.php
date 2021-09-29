@@ -10,13 +10,8 @@ class LoginController extends Controller
         return view('pages.login');
     }
     public function LoginSubmit(Request $request){
-        //using requests validate method
         $validate = $request->validate([
-                // 'name'=>'required|min:4|max:15',
-                // 'id'=>'required',
-                // 'dob'=>'required',
                 'email'=>'required|email',
-                // 'phone'=>'required|regex:/^([0-9\s\-\+\(\)]*)$/',
                 'password' => [
                     'required',
                     'string',
@@ -29,10 +24,7 @@ class LoginController extends Controller
             ],
             [
                 'password.required'=>'Password is required',
-                // 'name.required'=>'Name is required',
                 'email.required'=>'Email is required',
-                // 'name.min'=>'Name must be greater than 5 characters',
-                // 'name.max'=>'Name must be less than 15 characters'
             ]
         );
         //using class validate method
